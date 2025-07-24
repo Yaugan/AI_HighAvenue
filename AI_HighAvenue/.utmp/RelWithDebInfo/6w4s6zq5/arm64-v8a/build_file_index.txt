@@ -1,0 +1,2 @@
+D:\Projects\0_Unity\AI_HighAvenue\AI_HighAvenue\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+D:\Projects\0_Unity\AI_HighAvenue\AI_HighAvenue\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
