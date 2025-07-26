@@ -2,14 +2,15 @@ using UnityEngine;
 using TMPro;
 using Firebase.Auth;
 using Firebase.Extensions;
+using UnityEngine.SceneManagement;
 
 public class phoneLogin : MonoBehaviour
 {
     public TMP_InputField phoneInp,EnterCode_Inp;
-    public GameObject SuccessUi;
     uint phoneAuthTimeoutMs = 3 * 60000;//minutes to milisec
     FirebaseAuth auth;
     PhoneAuthProvider provider;
+
     private void Start()
     {
         auth = FirebaseAuth.DefaultInstance;
@@ -59,6 +60,7 @@ public class phoneLogin : MonoBehaviour
               // `id` contains the verification id of the request that timed out.
           });
     }
+
     public void VerifyOtp() {
 
         print("verify otp pressed");
@@ -83,8 +85,7 @@ public class phoneLogin : MonoBehaviour
             // The phone number providerID is 'phone'.
             Debug.Log("Phone provider ID: " + newUser.ProviderId);
 
-            SuccessUi.SetActive(true);
-            SuccessUi.transform.Find("Desc").GetComponent<TextMeshProUGUI>().text = "Id: " + task.Result.User.UserId;
+            SceneManager.LoadScene("Main");
 
         });
     }
